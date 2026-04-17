@@ -26,6 +26,7 @@ A modern News Application built using React that fetches real-time news using AP
 ---
 
 ## 📂 Project Structure
+
 src/
 ├── components/
 │ ├── News.tsx
