@@ -4,7 +4,7 @@ import NewsItems from './NewsItems'
 export class News extends Component {
 
   articles = [
-    {
+    { 
       "source": {
         "id": "wired",
         "name": "Wired"

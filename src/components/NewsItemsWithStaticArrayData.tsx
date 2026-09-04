@@ -4,7 +4,7 @@ interface Props {
   title: string;
   description: string;
   imageUrl: string;
-  newsUrl: string;
+  newsUrl: string; 
 }
 
 export class NewsItems extends Component<Props> {

@@ -8,7 +8,7 @@ type Props = {
   date?: string;
   author?: string;
   source?: string;
-  publishedAt?: string;
+  publishedAt?: string; 
 };
 
 export class NewsItems extends Component <Props> {
