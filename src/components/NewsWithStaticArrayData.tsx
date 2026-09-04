@@ -1,8 +1,15 @@
 import { Component } from 'react'
 import NewsItems from './NewsItems'
 
-export class News extends Component {
 
+interface State {
+  articles: any[];
+  loading: boolean;
+}
+
+export class News extends Component<{}, State> {
+
+  
   articles = [
     { 
       "source": {
@@ -1281,7 +1288,8 @@ export class News extends Component {
   ]
 
   constructor(){
-    super();
+    super({});
+
     this.state = {
       articles: this.articles,
       loading: false,
@@ -1293,7 +1301,7 @@ export class News extends Component {
       <div className='container my-3'>
         <h2>NewsMonkey - Top Headline</h2>
         <div className="row">
-            {this.state.articles.map((element) => (
+            {this.state.articles.map((element: any) => (
               <div className="col-md-3" key={element.url}>
                 <NewsItems 
                 title={element.title?.length > 45
