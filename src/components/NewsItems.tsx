@@ -8,6 +8,7 @@ type Props = {
   date?: string;
   author?: string;
   source?: string;
+  publishedAt?: string;
 };
 
 export class NewsItems extends Component <Props> {
@@ -26,7 +27,7 @@ export class NewsItems extends Component <Props> {
             <p className="card-text">{description}...</p>
             <p className="card-text"><small className="text-body-secondary">
               By {!author? "unknown": author} 
-              on {new Date(date).toLocaleString()}
+              on {date ? new Date(date).toLocaleString() : "Unknown date"}
               </small>
               </p>
             <a href={newsUrl} target="_blank" rel="noopener noreferrer" className="btn btn-sm btn-dark">Read More</a>

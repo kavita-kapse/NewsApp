@@ -1,6 +1,13 @@
-import { Component } from 'react'
+import { Component } from 'react';
 
-export class NewsItems extends Component {
+interface Props {
+  title: string;
+  description: string;
+  imageUrl: string;
+  newsUrl: string;
+}
+
+export class NewsItems extends Component<Props> {
 
   render() {
     let {title, description, imageUrl, newsUrl} = this.props; // destructuring
